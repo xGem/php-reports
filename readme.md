@@ -2,6 +2,11 @@
 
 by [xGem](http://www.xgem.com.ar)
 
+## Requirements
+
+- VirtualBox 5.1.8
+- Vagrant 1.9.4
+
 ## Setup
 
 - Clone
