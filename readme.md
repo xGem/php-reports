@@ -12,7 +12,7 @@ by [xGem](http://www.xgem.com.ar)
 - Vagrant up
 
 
-
+note: Vagrant provision scripts details [link](vagrant.md)
 
 
 
