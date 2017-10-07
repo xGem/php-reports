@@ -17,6 +17,8 @@ by [xGem](http://www.xgem.com.ar)
 
 note: Vagrant provision scripts details [link](vagrant.md)
 
+## Testing Installation
 
+- Open http://php-reports.dev/php-reports
 
 &copy; xGem 2017
