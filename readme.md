@@ -8,7 +8,10 @@ by [xGem](http://www.xgem.com.ar)
 
 ## Setup
 
-- Clone
+- Clone, with one of these two options:
+  git clone git@github.com:xGem/php-reports.git
+  git clone https://github.com/xGem/php-reports
+
 - Vagrant up
 - Add this record on host file. (ex. c:\windows\drivers\etc\host)
 ```
