@@ -1,4 +1,8 @@
 <?php
+
+include "includes/head.php";
+include "includes/header.php";
+
 $serverName = ".\sqlexpress"; //serverName\instanceName
 
 // Since UID and PWD are not specified in the $connectionInfo array,
@@ -12,4 +16,7 @@ if( $conn ) {
      echo "Connection could not be established.<br />";
      die( print_r( sqlsrv_errors(), true));
 }
+
+include "includes/footer.php";
+
 ?>

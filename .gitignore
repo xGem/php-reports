@@ -1,3 +1,5 @@
 .vagrant
 tools/heidi
 tools/tmp
+node_modules
+vendors

@@ -1,0 +1,31 @@
+{
+  "name": "php-reports",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "adm-zip": "^0.4.7",
+    "commander": "^2.9.0",
+    "dotenv": "^2.0.0",
+    "node-cli": "^0.1.0",
+    "progress": "^1.1.8",
+    "progress-bar": "^0.1.1",
+    "request": "^2.72.0"
+  },
+  "devDependencies": {
+    "cli": "^0.11.2",
+    "leasot": "^3.2.2"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:xGem/php-reports.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bin": {
+    "php-reports": "./scripts/cli/php-reports.js"
+  }
+}
