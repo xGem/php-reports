@@ -79,6 +79,9 @@ Vagrant.configure("2") do |config|
   config.vm.provision :shell, path: "scripts/install-iis.cmd"
   config.vm.provision :shell, path: "scripts/install-php.ps1"
   config.vm.provision :shell, path: "scripts/install-odbc.ps1"
+  config.vm.provision :shell, path: "scripts/install-sqlexpress.ps1"
+  config.vm.provision :shell, path: "scripts/create-database.ps1"
+  config.vm.provision :shell, path: "scripts/create-sqluser.ps1"
 
 
 end

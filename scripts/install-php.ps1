@@ -21,6 +21,7 @@ $VisualStudioRedistributablePackage = "vcredist_x86.exe"
 
 if (!(Test-Path $temp_dir\$VisualStudioRedistributablePackage)) {
   # Download Visual C++ Redistributable for Visual Studio 2015 x64.
+  Write-Host "Downloading vcredist_x86.exe..."
   Invoke-WebRequest -Uri $VisualStudioRedistributableDownloadLocation -OutFile $temp_dir\$VisualStudioRedistributablePackage
 }
 

@@ -27,3 +27,7 @@ After first "vagrant up" command or using "--provision" parameter these are the 
 - Sql Server Express 2014
 - .Net 3.5 Framework
 - xp_cmdshell
+
+### Extra
+
+* [tools](tools.md)
