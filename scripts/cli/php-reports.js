@@ -5,7 +5,7 @@ var program = require('commander');
 program
     .version('0.0.1')
     .command('add <cmd>','Add [php|db]')
-    .command('serve','Start web app')
+    .command('serve <cmd>','Start web app [php|apache]')
     .command('initdb','Init db')
     .command('restoredb','Restore db')
     .command('startdb','Start db')
