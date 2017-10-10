@@ -4,47 +4,29 @@
   <DIV class="row">
     <?php include "includes/menu.php" ?>
     <main class="col-sm-9 ml-sm-auto col-md-10 pt-3">
-    <h1 class="display-1">Intro</h1>
-    <p class="lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-      Donec a orci pretium, convallis sapien eu, laoreet risus.<br/>
-      Nulla a porttitor nibh. Cras in massa id ligula venenatis rhoncus.
-      Nullam a nulla consectetur, commodo sapien posuere, luctus felis. Nunc et laoreet nulla.
-      In quis mauris et ipsum congue pellentesque vitae non lacus.
-    </p>
-    <h2 id="sub1">Subtitle 1</h2>
-    <p><em>
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a orci pretium, convallis sapien eu, laoreet risus. Nulla a porttitor nibh. Cras in massa id ligula venenatis rhoncus. Nullam a nulla consectetur, commodo sapien posuere, luctus felis. Nunc et laoreet nulla. In quis mauris et ipsum congue pellentesque vitae non lacus. Aliquam erat volutpat. Pellentesque non eros libero. Vivamus ac est interdum, suscipit purus sed, tincidunt massa. Proin ac sollicitudin dui. Vivamus sit amet suscipit dui.
-    </em></p>
-    <pre><code>Sample of code text here...
-      And another line of sample text here...
-    </code></pre>
-    <button class="btn btn-lg" type="submit">Button submit</button>
-    <h2 id="sub2">Subtitle 2</h2>
-    <p><em>
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a orci pretium, convallis sapien eu, laoreet risus. Nulla a porttitor nibh. Cras in massa id ligula venenatis rhoncus. Nullam a nulla consectetur, commodo sapien posuere, luctus felis. Nunc et laoreet nulla. In quis mauris et ipsum congue pellentesque vitae non lacus. Aliquam erat volutpat. Pellentesque non eros libero. Vivamus ac est interdum, suscipit purus sed, tincidunt massa. Proin ac sollicitudin dui. Vivamus sit amet suscipit dui.
-    </em></p>
-    <pre><code>Sample of code text here...
-      And another line of sample text here...
-    </code></pre>
-    <button class="btn btn-lg" type="submit">Button submit</button>
-
-    <h2 id="sub3">Subtitle 3</h2>
-    <p><em>
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a orci pretium, convallis sapien eu, laoreet risus. Nulla a porttitor nibh. Cras in massa id ligula venenatis rhoncus. Nullam a nulla consectetur, commodo sapien posuere, luctus felis. Nunc et laoreet nulla. In quis mauris et ipsum congue pellentesque vitae non lacus. Aliquam erat volutpat. Pellentesque non eros libero. Vivamus ac est interdum, suscipit purus sed, tincidunt massa. Proin ac sollicitudin dui. Vivamus sit amet suscipit dui.
-    </em></p>
-    <pre><code>Sample of code text here...
-      And another line of sample text here...
-    </code></pre>
-    <button class="btn btn-lg" type="submit">Button submit</button>
-
-    <h2 id="sub4">Subtitle 4</h2>
-    <p><em>
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a orci pretium, convallis sapien eu, laoreet risus. Nulla a porttitor nibh. Cras in massa id ligula venenatis rhoncus. Nullam a nulla consectetur, commodo sapien posuere, luctus felis. Nunc et laoreet nulla. In quis mauris et ipsum congue pellentesque vitae non lacus. Aliquam erat volutpat. Pellentesque non eros libero. Vivamus ac est interdum, suscipit purus sed, tincidunt massa. Proin ac sollicitudin dui. Vivamus sit amet suscipit dui.
-    </em></p>
-    <pre><code>Sample of code text here...
-      And another line of sample text here...
-    </code></pre>
-    <button class="btn btn-lg" type="submit">Button submit</button>
+      <h1 class="display-1">Intro</h1>
+      <p class="lead">PHP-Reports project it is and web php aplication with MSSQL backend database.<br/>
+        This application include documentation, code sniped and sql examples for test <a href="https://www.aspose.com/products/cells/java">Aspose.Cells for Java</a> component.
+        Aspose.Cells is a componet to manage and create Excel spreadsheets.<br>
+        This cover main funtionalites and show examples that could be executed to see it working.
+      </p>
+      <h2 id="sub1">Getting Started</h2>
+      <p>
+        The complete source of this project is on <a href="https://github.com/xGem/php-reports">Github</a>.<br>
+        Its include a comple development environment using Vagrant.<br>
+        The code is written on PHP.
+      </p>
+      <h2 id="sub2">Fonts</h2>
+      <p><em>
+        Apply different fonts format, sizes and colors.
+      </em></p>
+      <a href="fonts.php">Example 1</a>
+      <br>
+      <h2 id="sub3">Formulas</h2>
+      <p><em>
+        Generate a file with formula cells that are calculated on the fly.
+      </em></p>
+      <a href="fonts.php">Example 1</a>
     </main>
   </DIV>
 </DIV>
