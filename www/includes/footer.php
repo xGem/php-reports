@@ -7,3 +7,4 @@
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <SCRIPT src="scripts/ie10-viewport-bug-workaround.js"></SCRIPT>
   </BODY>
+</html>
