@@ -16,18 +16,19 @@ $rd = $cmd.ExecuteReader();
 if ($rd.Read())
 {
 	Write-Host "Database $dbname already exists";
-	Return;
 }
+else
+{
+  # Create the database.
+  $sql = "CREATE DATABASE [$dbname];"
+  $cmd = New-Object Data.SqlClient.SqlCommand $sql, $con;
+  $cmd.ExecuteNonQuery();
+  Write-Host "Database $dbname is created!";
+}
+
 
 $rd.Close();
 $rd.Dispose();
-
-# Create the database.
-$sql = "CREATE DATABASE [$dbname];"
-$cmd = New-Object Data.SqlClient.SqlCommand $sql, $con;
-$cmd.ExecuteNonQuery();
-Write-Host "Database $dbname is created!";
-
 
 # Close & Clear all objects.
 $cmd.Dispose();
