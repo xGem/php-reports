@@ -4,7 +4,7 @@
   <DIV class="row">
     <?php include "includes/menu.php" ?>
     <main class="col-sm-9 ml-sm-auto col-md-10 pt-3">
-      <h1 class="display-1">Intro</h1>
+      <h1 class="display-1">Intro.</h1>
       <p class="lead">PHP-Reports project it is and web php aplication with MSSQL backend database.<br/>
         This application include documentation, code sniped and sql examples for test <a href="https://www.aspose.com/products/cells/java">Aspose.Cells for Java</a> component.
         Aspose.Cells is a componet to manage and create Excel spreadsheets.<br>
