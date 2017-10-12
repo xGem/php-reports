@@ -20,13 +20,13 @@
       <p><em>
         Apply different fonts format, sizes and colors.
       </em></p>
-      <a href="fonts.php">Example 1</a>
+      <a href="fonts.php">See example</a>
       <br>
       <h2 id="sub3">Formulas</h2>
       <p><em>
         Generate a file with formula cells that are calculated on the fly.
       </em></p>
-      <a href="fonts.php">Example 1</a>
+      <a href="formulas.php">See example</a>
     </main>
   </DIV>
 </DIV>

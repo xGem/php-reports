@@ -1,6 +1,4 @@
 <!DOCTYPE HTML>
-<!-- saved from url=(0053)https://getbootstrap.com/docs/4.0/examples/dashboard/ -->
-<!DOCTYPE html PUBLIC "" "">
 <HTML lang="en">
 
 <HEAD>
@@ -17,6 +15,7 @@
   <LINK href="content/bootstrap.min.css" rel="stylesheet">
   <!-- Custom styles for this template -->
   <LINK href="content/dashboard.css" rel="stylesheet">
+  <LINK href="content/highlight.css" rel="stylesheet">
 </HEAD>
 
 <BODY>
