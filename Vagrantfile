@@ -61,6 +61,8 @@ Vagrant.configure("2") do |config|
   #
   #   # Customize the amount of memory on the VM:
      vb.memory = "2024"
+     vb.customize ['modifyvm', :id, '--clipboard', 'bidirectional']
+
   end
   #
   # View the documentation for the provider you are using for more
@@ -76,12 +78,14 @@ Vagrant.configure("2") do |config|
   # Enable provisioning with a shell script. Additional provisioners such as
   # Puppet, Chef, Ansible, Salt, and Docker are also available. Please see the
   # documentation for more information about their specific syntax and use.
-  config.vm.provision :shell, path: "scripts/install-iis.cmd"
+  config.vm.provision :shell, path: "scripts/install-iis.ps1"
   config.vm.provision :shell, path: "scripts/install-php.ps1"
   config.vm.provision :shell, path: "scripts/install-odbc.ps1"
+  config.vm.provision :shell, path: "scripts/install-net35sp1.ps1"
   config.vm.provision :shell, path: "scripts/install-sqlexpress.ps1"
   config.vm.provision :shell, path: "scripts/create-database.ps1"
   config.vm.provision :shell, path: "scripts/create-sqluser.ps1"
+  config.vm.provision :shell, path: "scripts/openports-sqlserver.ps1"
 
 
 end

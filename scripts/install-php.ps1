@@ -8,7 +8,7 @@ function Unzip
 
 Write-Host "Installing PHP; it will take a while..."
 
-$temp_dir = "C:\tmp"
+$temp_dir = "C:\vagrant\download"
 $PHP_56 = "http://windows.php.net/downloads/releases/php-5.6.31-nts-Win32-VC11-x86.zip"
 $PHP_temp = $temp_dir+"\php.zip"
 $PHP_dest =  "C:\php"

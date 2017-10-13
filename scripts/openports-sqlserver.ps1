@@ -1,19 +1,25 @@
-Import-Module "sqlps"
-$srvMgmtObj = 'Microsoft.SqlServer.Management.Smo.'
-$wmi = new-object ($srvMgmtObj + 'Wmi.ManagedComputer').
+# http://stackoverflow.com/a/9949105
+$ErrorActionPreference = "Stop"
 
-# List the object properties, including the instance names.
-# $Wmi
+echo "Configuring TCP port"
 
-# Enable the TCP protocol on the default instance.
-$uri = "ManagedComputer[@Name='" + (get-item env:\computername).Value + "']/ServerInstance[@Name='SQLEXPRESS']/ServerProtocol[@Name='Tcp']"
+# http://technet.microsoft.com/en-us/library/dd206997(v=sql.105).aspx
+# Load assemblies
+[reflection.assembly]::LoadWithPartialName("Microsoft.SqlServer.Smo")
+[reflection.assembly]::LoadWithPartialName("Microsoft.SqlServer.SqlWmiManagement")
+
+# http://www.dbi-services.com/index.php/blog/entry/sql-server-2012-configuring-your-tcp-port-via-powershell
+# Set the port
+$smo = 'Microsoft.SqlServer.Management.Smo.'
+$wmi = new-object ($smo + 'Wmi.ManagedComputer')
+$uri = "ManagedComputer[@Name='" + (get-item env:\computername).Value + "']/ ServerInstance[@Name='SQLEXPRESS']/ServerProtocol[@Name='Tcp']"
 $Tcp = $wmi.GetSmoObject($uri)
-$Tcp.IsEnabled = $true
-$Tcp.Alter()
-$Tcp
+$wmi.GetSmoObject($uri + "/IPAddress[@Name='IPAll']").IPAddressProperties[1].Value="1433"
+$Tcp.alter()
 
-Set-ExecutionPolicy -ExecutionPolicy RemoteSigned
-#Enabling SQL Server Ports
-New-NetFirewallRule -DisplayName "SQL Server" -Direction Inbound -Protocol TCP -LocalPort 1433 -Action allow
-New-NetFirewallRule -DisplayName "SQL Admin Connection" -Direction Inbound -Protocol TCP -LocalPort 1434 -Action allow
-New-NetFirewallRule -DisplayName "SQL Database Management" -Direction Inbound -Protocol UDP -LocalPort 1434 -Action allow
+echo "DONE!"
+
+echo "Restarting service..."
+# Restart service so that configurations are applied
+restart-service -f "SQL Server (SQLEXPRESS)"
+echo "DONE!"
