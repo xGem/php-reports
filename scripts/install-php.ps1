@@ -44,13 +44,28 @@ if (!(Test-Path $PHP_dest)) {
 Copy-Item $PHP_ini $PHP_dest -force
 Write-Host "Php.ini copied."
 
-# Create a Handler Mapping for PHP.
-New-WebHandler -Name "PHPFastCGI" -Path "*.php" -Modules FastCgiModule -ScriptProcessor $PHP_cgi -Verb 'GET,HEAD,POST' -ResourceType Either
+If(Get-WebHandler -Name "PHPFastCGI")
+{
+  Write-Host "WebHandler PHPFastCGI already created."
+}
+else
+{
+  # Create a Handler Mapping for PHP.
+  New-WebHandler -Name "PHPFastCGI" -Path "*.php" -Modules FastCgiModule -ScriptProcessor $PHP_cgi -Verb 'GET,HEAD,POST' -ResourceType Either
+  Write-Host "WebHandler PHPFastCGI created!"
+}
 
-# Configure FastCGI Settings for PHP.
-Add-WebConfiguration -Filter /system.webServer/fastCgi -PSPath IIS:\ -Value @{fullpath=$PHP_cgi}
+If(Get-WebConfiguration -Filter "/system.webServer/fastCgi")
+{
+  Write-Host "Filter FastCGI already created."
+}
+else
+{
+  # Configure FastCGI Settings for PHP.
+  Add-WebConfiguration -Filter /system.webServer/fastCgi -PSPath IIS:\ -Value @{fullpath=$PHP_cgi}
+  Write-Host "Filter FastCGI DONE!"
+}
 
-Write-Host "Handler $handlerName mapping DONE!"
 
 Add-WebConfiguration -Filter /system.webServer/defaultDocument/files -PSPath IIS:\ -Value @{value="index.php"}
 Write-Host "New default document DONE!"
