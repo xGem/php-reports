@@ -55,17 +55,9 @@ else
   Write-Host "WebHandler PHPFastCGI created!"
 }
 
-If(Get-WebConfiguration -Filter "/system.webServer/fastCgi")
-{
-  Write-Host "Filter FastCGI already created."
-}
-else
-{
-  # Configure FastCGI Settings for PHP.
-  Add-WebConfiguration -Filter /system.webServer/fastCgi -PSPath IIS:\ -Value @{fullpath=$PHP_cgi}
-  Write-Host "Filter FastCGI DONE!"
-}
-
+# Configure FastCGI Settings for PHP.
+Add-WebConfiguration -Filter /system.webServer/fastCgi -PSPath IIS:\ -Value @{fullpath=$PHP_cgi}
+Write-Host "Filter FastCGI DONE!"
 
 Add-WebConfiguration -Filter /system.webServer/defaultDocument/files -PSPath IIS:\ -Value @{value="index.php"}
 Write-Host "New default document DONE!"

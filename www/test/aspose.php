@@ -30,12 +30,26 @@ class HelloWorld {
         $file_format_type = new FileFormatType();
         $workbook->save($dataDir . "HelloWorld.xls", $file_format_type->EXCEL_97_TO_2003);
 
-        print "Document has been saved, please check the output file.";
+        #print "Document has been saved, please check the output file.";
 
 
     }
 
 }
 
-print "Running Aspose\\Cells\\QuickStart\\HelloWorld::run()" . PHP_EOL;
+#print "Running Aspose\\Cells\\QuickStart\\HelloWorld::run()" . PHP_EOL;
 HelloWorld::run(__DIR__ . '/data/');
+
+$file = __DIR__ . '/data/HelloWorld.xls';
+
+if (file_exists($file)) {
+    header('Content-Description: File Transfer');
+    header('Content-Type: application/octet-stream');
+    header('Content-Disposition: attachment; filename="'.basename($file).'"');
+    header('Expires: 0');
+    header('Cache-Control: must-revalidate');
+    header('Pragma: public');
+    header('Content-Length: ' . filesize($file));
+    readfile($file);
+    exit;
+}

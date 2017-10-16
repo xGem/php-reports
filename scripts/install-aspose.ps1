@@ -16,8 +16,8 @@ if (!(Test-Path $donwload_dir\$JDK_exe)) {
 }
 
 Write-Host "Installing $JDK_exe"
-#$javax64install = Start-Process -FilePath $donwload_dir\$JDK_exe -ArgumentList "/s REBOOT=ReallySuppress" -Wait -Verbose -PassThru
-#$javax64install.waitForExit() #Start-Sleep -s 35
+$javax64install = Start-Process -FilePath $donwload_dir\$JDK_exe -ArgumentList "/s REBOOT=ReallySuppress" -Wait -Verbose -PassThru
+$javax64install.waitForExit() #Start-Sleep -s 35
 if ($javax64install.ExitCode -eq 0) {
 	write-host "Successfully Installed JDK X64"
 }
@@ -49,6 +49,7 @@ if (!(Test-Path $TOMCAT_dir)) {
 [Environment]::SetEnvironmentVariable("CATALINA_HOME", "$TOMCAT_dir\apache-tomcat-8.5.23", "Machine")
 $Env:TOMCAT_HOME = "$TOMCAT_dir\apache-tomcat-8.5.23"
 $Env:CATALINA_HOME = "$TOMCAT_dir\apache-tomcat-8.5.23"
+$Env:SERVICE_STARTUP_MODE = "auto"
 
 echo "$TOMCAT_dir\apache-tomcat-8.5.23\bin\service.bat"
 #Start service
@@ -66,7 +67,7 @@ echo "Starting Service Tomcat8..."
 Start-Service "Tomcat8"
 
 echo "Test url..."
-(Invoke-WebRequest -Uri "http://localhost:8080").StatusCode
+(Invoke-WebRequest -Uri "http://localhost:8080" -usebasicparsing).StatusCode
 
 #Stop the service
 Stop-Service "Tomcat8"
@@ -95,6 +96,7 @@ if (!(Test-Path $JB_tmp)) {
 #copy JavaBridge.war %TOMCAT_HOME%/webapps/JavaBridge.war
 Copy-Item $JB_tmp"\JavaBridge.war" -Destination $Env:TOMCAT_HOME"\webapps\"
 Start-Service "Tomcat8"
+Start-Sleep -s 15
 
 #copy %PHP_HOME%/bin/php-cgi.exe %TOMCAT_HOME%\webapps\JavaBridge\WEB-INF\cgi\amd64-windows\
 Copy-Item "c:\php\php-cgi.exe" -Destination $Env:TOMCAT_HOME"\webapps\JavaBridge\WEB-INF\cgi\amd64-windows\"
@@ -104,7 +106,7 @@ Copy-Item "c:\php\php5.dll" -Destination $Env:TOMCAT_HOME"\webapps\JavaBridge\WE
 #Start Tomcat Service (for automatic deployment, tomcat will explode the war file into a physical directory)
 #Check for http://localhost:8080/JavaBridge/test.php, if answers back with HTTP 200, then...
 #Stop Tomcat Service (the ../webapps/JavaBridge folder was created, now continue with the deployment...)
-(Invoke-WebRequest -Uri "http://localhost:8080/JavaBridge/test.php").StatusCode
+(Invoke-WebRequest -Uri "http://localhost:8080/JavaBridge/test.php" -usebasicparsing).StatusCode
 Stop-Service "Tomcat8"
 
 #Install ASPOSE
