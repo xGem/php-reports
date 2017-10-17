@@ -12,22 +12,36 @@ mwrock/Windows2012R2
 
 After first "vagrant up" command or using "--provision" parameter these are the steps automatic provision runs.
 
+### Pre-Install Tasks
+
+- Language
+
 ### Web
 
 - IIS & FastCGI
 - PHP & VC++
-- PHP.INI
-- Connect IIS – PHP
-- GETTEXT
-- SQLSRV
 - ODBC Driver 11
 
 ### DB
 
 - Sql Server Express 2014
 - .Net 3.5 Framework
-- xp_cmdshell
+
+### Post-Install Tasks
+
+- Create Database
+- Create user
+- Open Ports
+
+### Aspose
+
+- JDK
+- Tomcat
+- JavaBridge
+- Aspose Cells
 
 ### Extra
 
 * [tools](tools.md)
+  - Heidi
+  - SQL Management Studio 

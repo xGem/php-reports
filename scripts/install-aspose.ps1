@@ -11,8 +11,7 @@ Write-Host "Install JDK"
 $JDK_exe = "jdk-8u144-windows-x64.exe"
 
 if (!(Test-Path $donwload_dir\$JDK_exe)) {
-  # Download Visual C++ Redistributable for Visual Studio 2015 x64.
-  #check https://www.java.com/en/download/manual.jsp for windows JRE download links and install
+  #TODO
 }
 
 Write-Host "Installing $JDK_exe"
@@ -65,6 +64,7 @@ else {
 #Check if http://localhost:8080 does respond with HTTP 200, then...
 echo "Starting Service Tomcat8..."
 Start-Service "Tomcat8"
+Start-Sleep -s 15
 
 echo "Test url..."
 (Invoke-WebRequest -Uri "http://localhost:8080" -usebasicparsing).StatusCode
@@ -114,6 +114,10 @@ Stop-Service "Tomcat8"
   #https://downloads.aspose.com/login.aspx?returnURL=https://downloads.aspose.com/cells/java/new-releases/aspose.cells-for-java-17.9/
 $ASPOSE_zip = "aspose-cells-17.9-java.zip"
 $ASPOSE_tmp = $donwload_dir + "\ASPOSE"
+
+if (!(Test-Path $donwload_dir\$ASPOSE_zip)) {
+  #TODO
+}
 
 #Unzip aspose-cells-17.9-java.zip from aspose-cells-17.9-java.zip
 if (!(Test-Path $ASPOSE_tmp)) {
