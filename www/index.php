@@ -16,17 +16,27 @@
         Its include a comple development environment using Vagrant.<br>
         The code is written on PHP.
       </p>
+      <p>
+        <b>Reference:</b><br>
+        <a href="https://apireference.aspose.com/java/cells">Aspose Cells for Java API</a>
+      </p>
       <h2 id="sub2">Fonts</h2>
       <p><em>
         Apply different fonts format, sizes and colors.
       </em></p>
-      <a href="fonts.php">See example</a>
+      <a href="fonts.php">See example 1</a>
       <br>
       <h2 id="sub3">Formulas</h2>
       <p><em>
         Generate a file with formula cells that are calculated on the fly.
       </em></p>
-      <a href="formulas.php">See example</a>
+      <a href="formulas.php">See example 1</a>
+      <br>
+      <h2 id="sub4">Tables</h2>
+      <p><em>
+        Generate a file with tables with data from a database.
+      </em></p>
+      <a href="tables.php">See example 1</a>
     </main>
   </DIV>
 </DIV>
