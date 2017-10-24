@@ -3,4 +3,7 @@ tools/heidi
 tools/tmp
 node_modules
 vendors
+vendor
 download
+www/data/*.xls
+www/data/*.xlsx
