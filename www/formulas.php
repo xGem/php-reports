@@ -4,7 +4,7 @@
 <DIV class="container-fluid">
   <DIV class="row col-sm-8">
     <main class="col-sm-9 ml-sm-auto col-md-10 pt-3">
-      <h2 id="sub1">Fonts - Example 1</h2>
+      <h2 id="sub1">Formulas - Example 1</h2>
       <p><em>
         Generate a file applying multiple fonts format, size and colors.
       </em></p><br/>
@@ -21,6 +21,13 @@ $font->setSize(14);
 $cell->setStyle($style);</code>
         <button class="btn" data-clipboard-target="#phpcode" style="position:absolute;right:10px">Copy code <img class="clippy" width="13" src="images/clippy.svg" alt="Copy to clipboard"></button>
         <br/>
+      </pre>
+        <h4>SQL</h4>
+      <pre>
+          <code id="sqlcode">
+          </code>
+          <button class="btn" data-clipboard-target="#sqlcode" style="position:absolute;right:10px">Copy code <img class="clippy" width="13" src="images/clippy.svg" alt="Copy to clipboard"></button>
+          <br/>
       </pre>
       <form action="fonts_action.php">
         <button class="btn btn-lg" type="submit">Run Example</button><br/>
