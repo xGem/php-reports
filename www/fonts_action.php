@@ -3,9 +3,12 @@ require_once("/includes/Java.inc");
 
 use com\aspose\cells\Workbook as Workbook;
 use com\aspose\cells\FileFormatType as FileFormatType;
+use com\aspose\cells\Color as Color;
+
 
 $dataDir = __DIR__ . '/data/';
 $workbook = new Workbook();
+$color = new Color();
 
 // Accessing the first worksheet in the book ("Sheet1").
 $sheet = $workbook->getWorksheets()->get(0);
@@ -26,6 +29,7 @@ $style = $cell->getStyle();
 $font = $style->getFont();
 $font->setName("Arial");
 $font->setBold(true);
+$font->setColor($color->getBlue());
 $font->setSize(20);
 $cell->setStyle($style);
 

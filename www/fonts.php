@@ -17,6 +17,7 @@ $style = $cell->getStyle();
 $font = $style->getFont();
 $font->setName("Times New Roman");
 $font->setBold(true);
+$font->setColor($color->getBlue());
 $font->setSize(14);
 $cell->setStyle($style);</code>
         <button class="btn" data-clipboard-target="#phpcode" style="position:absolute;right:10px">Copy code <img class="clippy" width="13" src="images/clippy.svg" alt="Copy to clipboard"></button>
@@ -25,6 +26,11 @@ $cell->setStyle($style);</code>
       <form action="fonts_action.php">
         <button class="btn btn-lg" type="submit">Run Example</button><br/>
       </form>
+      <br>
+      <h4>References</h4>
+      <lu>
+        <li><a href="https://docs.aspose.com/display/cellsjava/Dealing+with+Font+Settings#DealingwithFontSettings-SettingFontColor">Aspose.Cells for Java - Dealing with Font Settings.</a></li>
+      </lu>
     </main>
   </DIV>
 </DIV>
