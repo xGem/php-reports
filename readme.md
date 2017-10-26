@@ -25,6 +25,9 @@ by [xGem](http://www.xgem.com.ar)
 note: Vagrant provision scripts details [link](vagrant.md)
 - Access provisioned computer with vagrant/vagrant.
 - Import example datasets from /data directory.
+  Executing migrate_and_seed.ps1 with powershell.
+  Data directory is located at c:\vagrant\data.
+
 
 ## Testing Installation
 
