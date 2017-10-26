@@ -1,6 +1,11 @@
 <?php include "includes/head.php" ?>
 <?php include "includes/header.php" ?>
+<?php
+  require_once("/includes/queries.php");
+  $sqlcode = get_code_query("BAES-1.sql");
 
+
+?>
 <DIV class="container-fluid">
   <DIV class="row col-sm-8">
     <main class="col-sm-9 ml-sm-auto col-md-10 pt-3">
@@ -18,11 +23,11 @@
       <br/>
       <h4>SQL</h4>
       <pre>
-        <code id="sqlcode"></code>
+        <code id="sqlcode"><?php echo $sqlcode ?></code>
         <button class="btn" data-clipboard-target="#phpcode" style="position:absolute;right:10px">Copy code <img class="clippy" width="13" src="images/clippy.svg" alt="Copy to clipboard"></button>
         <br/>
       </pre>
-      <form action="formulas_action.php">
+      <form action="tables_action.php">
         <button class="btn btn-lg" type="submit">Run Example</button><br/>
       </form>
       <br>
