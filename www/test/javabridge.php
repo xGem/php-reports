@@ -1,5 +1,9 @@
 <?php
  require_once("../includes/Java.inc");
  $System = java("java.lang.System");
- echo $System->getProperties();
+
+ echo '<pre>';
+ print_r($System->getProperties());
+ echo '</pre>';
+
  ?>
