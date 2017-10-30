@@ -22,7 +22,8 @@ BEGIN
 	SELECT
 	   ColumnA,
 	   ColumnB,
-	   ColumnC
+	   ColumnC,
+		 ColumnD
 	FROM php_reports A
 	ORDER BY A.ID ASC
 
