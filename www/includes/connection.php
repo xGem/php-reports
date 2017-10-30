@@ -36,8 +36,10 @@ function open_connection() {
 	$myBD = "php-reports";
 
 	$connectionInfo = array( "UID"=>$myUser,
-		                         "PWD"=>$myPass,
-		                         "Database"=>$myBD);
+		                       "PWD"=>$myPass,
+		                       "Database"=>$myBD,
+													 "ReturnDatesAsStrings"=>true  //<-- This is the important line
+												 );
 
 	$connection = sqlsrv_connect( $myServer, $connectionInfo);
 
