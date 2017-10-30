@@ -29,8 +29,8 @@ while( $row = sqlsrv_fetch_array( $data, SQLSRV_FETCH_ASSOC )) {
 
 # Saving the modified Excel file in default (that is Excel 2003) format
 $file_format_type = new FileFormatType();
-$workbook->save($dataDir . "Tables.xls", $file_format_type->EXCEL_97_TO_2003);
-$file = __DIR__ . '/data/Tables.xls';
+$workbook->save($dataDir . "Pivot.xls", $file_format_type->EXCEL_97_TO_2003);
+$file = __DIR__ . '/data/Pivot.xls';
 
 if (file_exists($file)) {
     header('Content-Description: File Transfer');

@@ -37,6 +37,12 @@
         Generate a file with tables with data from a database.
       </em></p>
       <a href="tables.php">See example 1</a>
+      <br>
+      <h2 id="sub7">Pivot Tables</h2>
+      <p><em>
+        Generate an Excel file with a pivot tables with data from a database.
+      </em></p>
+      <a href="pivot.php">See example 1</a>
     </main>
   </DIV>
 </DIV>
