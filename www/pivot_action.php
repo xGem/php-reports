@@ -59,11 +59,14 @@ $pivotTable->addFieldToArea($PivotFieldType->COLUMN, 1);
 //Dragging the third field to the data area.
 $pivotTable->addFieldToArea($PivotFieldType->DATA, 2);
 
+$pivotTable->calculateData();
 
 # Saving the modified Excel file in default (that is Excel 2003) format
 $file_format_type = new FileFormatType();
-$workbook->save($dataDir . "Tables.xls", $file_format_type->EXCEL_97_TO_2003);
-$file = __DIR__ . '/data/Tables.xls';
+$workbook->save($dataDir . "Tables.xlsx", $file_format_type->XLSX);
+$file = __DIR__ . '/data/Tables.xlsx';
+
+//exit();
 
 if (file_exists($file)) {
     header('Content-Description: File Transfer');
