@@ -7,3 +7,4 @@ vendor
 download
 www/data/*.xls
 www/data/*.xlsx
+!www/data/template.xlsx

@@ -49,6 +49,12 @@
         Generate an Excel file with a pivot tables with data from a database.
       </em></p>
       <a href="pivot.php">See example 1</a>
+      <br>
+      <h2 id="sub9">Template</h2>
+      <p><em>
+        Modify a excel template to complete with some data.
+      </em></p>
+      <a href="template.php">See example 1</a>
     </main>
   </DIV>
 </DIV>
