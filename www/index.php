@@ -38,6 +38,12 @@
       </em></p>
       <a href="tables.php">See example 1</a>
       <br>
+      <h2 id="sub5">Charts</h2>
+      <p><em>
+        Generate charts from data in a worksheet.
+      </em></p>
+      <a href="charts.php">See example 1</a>
+      <br>
       <h2 id="sub6">Draw Objects</h2>
       <p><em>
         Generate some objects.

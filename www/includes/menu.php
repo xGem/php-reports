@@ -13,7 +13,7 @@
       <A class="nav-link" href="#sub4">Tables</A>
     </LI>
     <LI class="nav-item">
-      <A class="nav-link" href="#sub5">Graps</A>
+      <A class="nav-link" href="#sub5">Charts</A>
     </LI>
     <LI class="nav-item">
       <A class="nav-link" href="#sub6">Draw Objects</A>
