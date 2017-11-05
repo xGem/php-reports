@@ -50,6 +50,12 @@
       </em></p>
       <a href="pivot.php">See example 1</a>
       <br>
+      <h2 id="sub8">Macros</h2>
+      <p><em>
+        Write and execute a macro in an excel file.
+      </em></p>
+      <a href="macros.php">See example 1</a>
+      <br>
       <h2 id="sub9">Template</h2>
       <p><em>
         Modify a excel template to complete with some data.
