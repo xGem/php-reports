@@ -54,7 +54,7 @@ $chartIndex = $sheet->getCharts()->add($chartType->COLUMN, 12, 1, 33, 12);
 $chart = $sheet->getCharts()->get($chartIndex);
 
 //Set properties of chart title
-$chart->getTitle()->setText("TOP 10: Comercializadoras independientes de electricidad con mayor crecimiento");
+$chart->getTitle()->setText("TOP 10: Independent Electricity Distributors with more growth");
 $chart->getTitle()->getFont()->setBold(true);
 $chart->getTitle()->getFont()->setSize(12);
 
