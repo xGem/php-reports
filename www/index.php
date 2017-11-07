@@ -67,6 +67,13 @@
         Modify a excel template to complete with some data.
       </em></p>
       <a href="template.php">See example 1</a>
+      <br>
+      <h2 id="sub10">Security</h2>
+      <p><em>
+        1) Protect a worksheet with a password.<br>
+        2) Encrypt a workbook with a password.
+      </em></p>
+      <a href="security.php">See examples</a>
     </main>
   </DIV>
 </DIV>
