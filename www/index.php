@@ -26,6 +26,12 @@
       </em></p>
       <a href="fonts.php">See example 1</a>
       <br>
+      <h2 id="sub11">Condicional Format</h2>
+      <p><em>
+        Apply different format, sizes and colors depends on cell value
+      </em></p>
+      <a href="condicional.php">See example 1</a>
+      <br>
       <h2 id="sub3">Formulas</h2>
       <p><em>
         Generate a file with formula cells that are calculated on the fly.

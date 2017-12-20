@@ -10,6 +10,9 @@
       <A class="nav-link" href="#sub3">Formulas</A>
     </LI>
     <LI class="nav-item">
+      <A class="nav-link" href="#sub11">Condicional</A>
+    </LI>
+    <LI class="nav-item">
       <A class="nav-link" href="#sub4">Tables</A>
     </LI>
     <LI class="nav-item">

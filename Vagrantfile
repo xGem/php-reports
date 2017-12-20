@@ -15,6 +15,8 @@ Vagrant.configure("2") do |config|
   config.vm.box = "mwrock/Windows2012R2"
   config.vm.guest = :windows
   config.vm.base_mac = "080027527704"
+  config.vm.communicator = "winrm"
+  config.winrm.password = "Password10"
   config.vm.provider "virtualbox" do |v|
     v.gui = true
   end
@@ -88,6 +90,5 @@ Vagrant.configure("2") do |config|
   config.vm.provision :shell, path: "scripts/create-sqluser.ps1"
   config.vm.provision :shell, path: "scripts/openports-sqlserver.ps1"
   config.vm.provision :shell, path: "scripts/install-aspose.ps1"
-
 
 end
